@@ -17,6 +17,7 @@ header {
 nav {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .ig img{
     width: 25px;
@@ -280,25 +281,25 @@ section {
 
 .slider {
     position: relative;
-    width: 50%; /* กำหนดความกว้างของ slider */
+    width: 50%;
     margin: auto;
     top: 10%;
-    overflow: hidden; /* ซ่อนภาพที่ออกนอกกรอบ */
+    overflow: hidden;
 }
 
 .slider-images {
-    display: flex; /* จัดเรียงในแนวนอน */
-    transition: transform 0.5s ease; /* ทำให้การเลื่อนนุ่มนวล */
+    display: flex;
+    transition: transform 0.5s ease;
 }
 
 .slide {
-    min-width: 33.33%; /* แสดง 3 รูปในหนึ่งครั้ง */
+    min-width: 33.33%;
     transition: opacity 0.5s ease;
     position: relative; 
 }
 
 .slide img {
-    width: 100%; /* กำหนดให้ภาพครอบคลุมเต็มสไลด์ */
+    width: 100%;
     border-radius: 20%;
 }
 
@@ -310,11 +311,11 @@ section {
 }
 
 .active {
-    opacity: 1; /* รูปที่ชัดที่สุด */
+    opacity: 1;
 }
 
 .slide:not(.active) {
-    opacity: 0.5; /* ทำให้รูปภาพที่ไม่ใช่กลางเบลอ */
+    opacity: 0.5;
 }
 
 .prev, .next {
@@ -378,3 +379,55 @@ section {
     opacity: 1;
 }
 
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    #about div {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #about img {
+        width: 80%;
+        position: relative;
+        margin: 0 auto;
+    }
+
+    .edu-img {
+        flex-direction: column;
+    }
+
+    .edu-img img {
+        width: 100%;
+    }
+
+    .slider {
+        width: 100%;
+    }
+
+    .prev, .next {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    #contact .cont-word h1 {
+        font-size: 60px;
+        margin-top: 60px;
+    }
+
+    .cont-img {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cont-img div a img {
+        width: 60px;
+    }
+}
